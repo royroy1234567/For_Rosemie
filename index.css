@@ -786,6 +786,7 @@ html[data-direction="backward"]::view-transition-new(right-page) {
 
 @media (max-width: 720px) {
 	.dream-stage {
+		grid-template-rows: auto auto auto;
 		min-height: 100svh;
 		padding-inline: 0.7rem;
 	}
@@ -799,29 +800,74 @@ html[data-direction="backward"]::view-transition-new(right-page) {
 	}
 
 	.book {
-		aspect-ratio: 1.38;
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+		width: 100%;
+		aspect-ratio: auto;
 	}
 
 	.book-view {
-		--book-width: min(100%, calc((100svh - 11rem) * 1.38));
+		--book-width: 100%;
+		align-content: start;
+		padding-block: 1.25rem;
 	}
 
 	.page--left,
 	.page--right {
+		width: 100%;
+		min-height: 0;
 		padding: 1.25rem 1rem 1.5rem;
+	}
+
+	.page--left {
+		border-radius: 0.65rem 0.65rem 0.12rem 0.12rem;
+	}
+
+	.page--right {
+		display: flex;
+		flex-direction: column;
+		border-radius: 0.12rem 0.12rem 0.65rem 0.65rem;
+	}
+
+	.page-stack,
+	.book-spine {
+		display: none;
 	}
 
 	.entry-title {
 		font-size: clamp(1.35rem, 6vw, 2.4rem);
 	}
 
+	.entry-time {
+		margin-top: 0.75rem;
+	}
+
+	.entry-time:empty {
+		display: none;
+	}
+
 	.entry-prose {
 		font-size: clamp(0.82rem, 3.5vw, 1.2rem);
 	}
 
-	.entry-note,
+	.entry-note {
+		display: block;
+		max-width: 24ch;
+		margin-top: 1.25rem;
+		font-size: clamp(0.72rem, 3vw, 0.95rem);
+		line-height: 1.25;
+	}
+
+	.page-number {
+		position: static;
+		display: block;
+		margin: 1.25rem auto 0;
+		transform: none;
+	}
+
 	.moon-label {
-		display: none;
+		display: block;
 	}
 
 	.moon-study {
@@ -830,7 +876,7 @@ html[data-direction="backward"]::view-transition-new(right-page) {
 	}
 
 	.dream-photo-wrap {
-		width: 100%;
+		width: min(100%, 25rem);
 	}
 
 	.margin-note {
@@ -867,11 +913,12 @@ html[data-direction="backward"]::view-transition-new(right-page) {
 	}
 
 	.book {
-		aspect-ratio: 1.22;
+		width: 100%;
+		aspect-ratio: auto;
 	}
 
 	.book-view {
-		--book-width: min(100%, calc((100svh - 9rem) * 1.22));
+		--book-width: 100%;
 	}
 
 	.page--left,
@@ -879,10 +926,14 @@ html[data-direction="backward"]::view-transition-new(right-page) {
 		padding: 0.9rem 0.72rem 1.2rem;
 	}
 
-	.entry-index,
-	.entry-note,
+	.entry-index {
+		font-size: 0.5rem;
+	}
+
 	.photo-credit {
-		display: none;
+		display: block;
+		margin-top: 0.5rem;
+		font-size: 0.52rem;
 	}
 
 	.entry-time {
