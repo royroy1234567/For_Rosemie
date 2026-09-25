@@ -109,23 +109,19 @@
 				<span>The Moonleaf Archive</span>
 				<span aria-hidden="true">𖥸</span>
 				<span>From the field trips</span>
+				<button
+					class="music-button"
+					id="musicButton"
+					type="button"
+					aria-pressed="false"
+				>
+					Play music
+				</button>
 			</footer>
 			<audio id="backgroundMusic" loop preload="auto">
 				<source src="audio.mp4" type="audio/mp4" />
-            </audio>
+			</audio>
 
-            <script>
-                const backgroundMusic = document.getElementById("backgroundMusic");
-
-                document.addEventListener(
-                    "click",
-                    () => {
-                        backgroundMusic.play().catch(() => {});
-                    },
-                    { once: true }
-                );
-            </script>
-
-            <script src="index.js"></script>
+			<script src="index.js"></script>
 	</body>
 </html>

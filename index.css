@@ -135,6 +135,18 @@ a:focus-visible {
 	font-size: 0.62rem;
 }
 
+.music-button {
+	padding: 0.35rem 0.55rem;
+	border: 1px solid rgba(67, 52, 34, 0.32);
+	border-radius: 999px;
+	color: inherit;
+	font: inherit;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	background: transparent;
+	cursor: pointer;
+}
+
 .book-view {
 	--book-width: min(100%, 68rem, calc((100svh - 13.5rem) * 1.68));
 	display: grid;
@@ -904,6 +916,10 @@ html[data-direction="backward"]::view-transition-new(right-page) {
 	.site-footer span:first-child,
 	.site-footer span:last-child {
 		display: none;
+	}
+
+	.music-button {
+		font-size: 0.58rem;
 	}
 }
 

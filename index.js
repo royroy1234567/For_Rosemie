@@ -79,7 +79,9 @@ const elements = {
 	previousEdge: document.querySelector("#previousEdge"),
 	nextEdge: document.querySelector("#nextEdge"),
 	progressDots: document.querySelector("#progressDots"),
-	announcement: document.querySelector("#entryAnnouncement")
+	announcement: document.querySelector("#entryAnnouncement"),
+	backgroundMusic: document.querySelector("#backgroundMusic"),
+	musicButton: document.querySelector("#musicButton")
 };
 
 const prefersReducedMotion = window.matchMedia(
@@ -87,6 +89,44 @@ const prefersReducedMotion = window.matchMedia(
 );
 let currentIndex = 0;
 let isTransitioning = false;
+let musicStarted = false;
+
+function updateMusicButton(isPlaying) {
+	elements.musicButton.textContent = isPlaying ? "Pause music" : "Play music";
+	elements.musicButton.setAttribute("aria-pressed", String(isPlaying));
+}
+
+function startMusic() {
+	if (musicStarted || !elements.backgroundMusic) return;
+
+	const playAttempt = elements.backgroundMusic.play();
+	if (!playAttempt) {
+		musicStarted = true;
+		updateMusicButton(true);
+		return;
+	}
+
+	playAttempt
+		.then(() => {
+			musicStarted = true;
+			updateMusicButton(true);
+		})
+		.catch(() => {
+			updateMusicButton(false);
+		});
+}
+
+function toggleMusic() {
+	if (elements.backgroundMusic.paused) {
+		musicStarted = false;
+		startMusic();
+		return;
+	}
+
+	elements.backgroundMusic.pause();
+	musicStarted = false;
+	updateMusicButton(false);
+}
 
 function preloadImage(src) {
 	return new Promise((resolve) => {
@@ -195,6 +235,16 @@ elements.previousButton.addEventListener("click", () => turnPage("backward"));
 elements.previousEdge.addEventListener("click", () => turnPage("backward"));
 elements.nextButton.addEventListener("click", () => turnPage("forward"));
 elements.nextEdge.addEventListener("click", () => turnPage("forward"));
+elements.musicButton.addEventListener("click", toggleMusic);
+
+document.addEventListener(
+	"pointerdown",
+	(event) => {
+		if (event.target.closest("#musicButton")) return;
+		startMusic();
+	},
+	{ passive: true }
+);
 
 document.addEventListener("keydown", (event) => {
 	if (isTransitioning || event.altKey || event.ctrlKey || event.metaKey) return;
