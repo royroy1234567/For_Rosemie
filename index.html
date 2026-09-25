@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://images.unsplash.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+Runic&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="index.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pen</title>
+	</head>
+	<body>
+		<main class="dream-stage">
+			<div class="ambient ambient--one" aria-hidden="true"></div>
+			<div class="ambient ambient--two" aria-hidden="true"></div>
+
+			<header class="site-header">
+				<p class="eyebrow">Field notes gathered beneath the elder boughs</p>
+			</header>
+
+			<section
+				class="book-view"
+				id="bookView"
+				aria-label="Open elven field journal"
+				aria-describedby="entryAnnouncement"
+			>
+				<div class="book" id="book">
+					<div class="page-stack page-stack--left" aria-hidden="true"></div>
+					<div class="page-stack page-stack--right" aria-hidden="true"></div>
+
+					<article class="page page--left" id="leftPage">
+						<div class="paper-grain" aria-hidden="true"></div>
+						<p class="entry-index" id="entryIndex"></p>
+						<time class="entry-time" id="entryTime"></time>
+						<h2 class="entry-title" id="entryTitle"></h2>
+						<div class="ink-rule" aria-hidden="true"></div>
+						<p class="entry-prose" id="entryProse"></p>
+						<p class="entry-note" id="entryNote"></p>
+
+						<div class="moon-study" id="moonStudy" aria-hidden="true">
+							<div class="moon-orbit"></div>
+							<div class="moon-disc"></div>
+							<span class="moon-label">moonleaf rune</span>
+						</div>
+
+						<span class="page-number" id="leftPageNumber"></span>
+
+						<button
+							class="page-edge page-edge--left"
+							id="previousEdge"
+							type="button"
+							aria-label="Turn to the previous field note"
+						></button>
+					</article>
+
+					<article class="page page--right" id="rightPage">
+						<div class="paper-grain" aria-hidden="true"></div>
+						<figure class="dream-photo-wrap">
+							<span class="tape tape--left" aria-hidden="true"></span>
+							<span class="tape tape--right" aria-hidden="true"></span>
+							<div class="photo-fallback" aria-hidden="true">
+								image lost to rain
+							</div>
+							<img class="dream-photo" id="dreamPhoto" alt="" />
+							<figcaption id="photoCaption"></figcaption>
+						</figure>
+
+						<p class="margin-note" id="marginNote"></p>
+						<p class="photo-credit">
+							<a id="photoCredit" target="_blank" rel="noreferrer"></a>
+						</p>
+						<span class="page-number" id="rightPageNumber"></span>
+
+						<button
+							class="page-edge page-edge--right"
+							id="nextEdge"
+							type="button"
+							aria-label="Turn to the next field note"
+						></button>
+					</article>
+
+					<div class="book-spine" aria-hidden="true"></div>
+				</div>
+
+				<nav class="book-controls" aria-label="Field journal navigation">
+					<button class="turn-button" id="previousButton" type="button">
+						<span aria-hidden="true">←</span>
+						<span>Previous note</span>
+					</button>
+					<div class="progress-dots" id="progressDots" aria-hidden="true"></div>
+					<button class="turn-button" id="nextButton" type="button">
+						<span>Next note</span>
+						<span aria-hidden="true">→</span>
+					</button>
+				</nav>
+			</section>
+
+			<p
+				class="entry-announcement"
+				id="entryAnnouncement"
+				aria-live="polite"
+			></p>
+
+			<footer class="site-footer">
+				<span>The Moonleaf Archive</span>
+				<span aria-hidden="true">𖥸</span>
+				<span>From the field trips</span>
+			</footer>
+		</main>
+		<script src="index.js"></script>
+	</body>
+</html>
