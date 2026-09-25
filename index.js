@@ -1,13 +1,13 @@
 const entries = [
 	{
-		title: "Hi  Joy",
+		title: "Hi wifey",
 		prose:
 			"Hi Baby, I'm Sorry for Making you feel that way Last Night, I know you were upset and I should have been more understanding. I want you to know that I care about your feelings and I will do my best to control my temper, I love you. Please forgive me.",
 		note: "I'm not perfect, but I will always try to be better for you.",
-		margin: "Moss remembers the feet that walk gently.",
-		caption: "Sunlight entering the Mosswood",
+		margin: "Please Remember na andito lang ako .",
+		caption: "Cute mo dito",
 		image:
-			"https://images.unsplash.com/photo-1756185554759-412aa3825734?auto=format&fit=crop&w=1200&q=85",
+			"Rosemie1.jpg",
 		alt: "Warm sunlight filtering through a dense green forest",
 		accent: "#688c43",
 		accentRgb: "104, 140, 67",
@@ -15,14 +15,29 @@ const entries = [
 		nightSoft: "#f0e8c9"
 	},
 	{
-		title: "The Lanterncap Circle",
+		title: "My Rose",
 		prose:
-			"Seven lanterncaps appeared beneath the hazel after rain. Their colours changed whenever a bird crossed overhead.",
-		note: "Do not pick the smallest one. It is said to be listening for the roots.",
-		margin: "A mushroom ring is a doorway only while no one is watching.",
-		caption: "Lanterncaps beneath a starry canopy",
+			"A rose may have thorns, yet its beauty remains. embracing every part of you, even the ones that may hurt",
+		note: "Mamahalin kita, kasama ang iyong mga tinik at bawat piraso ng iyong pagkatao ",
+		margin: "I will cherish you, thorns and all, for you are my rose.",
+		caption: "Mahal kita, kahit malayo ka ",
 		image:
-			"https://images.unsplash.com/photo-1600995616866-d2dc0215774a?auto=format&fit=crop&w=1200&q=85",
+			"Rosemie3.jpg",
+		alt: "A waterfall cascading through a lush forest veiled in mist",
+		accent: "#4f805c",
+		accentRgb: "79, 128, 92",
+		night: "#cfe0bf",
+		nightSoft: "#edf0d0"
+	},
+		{
+		title: "My  Joy",
+		prose:
+			"Ikaw ang pinaka malalim kong lungkot, pinaka mababaw na ligaya",
+		note: "para sa iyo na ang aking walang hanggang debosyon.",
+		margin: "pero sana sa akin ang mga ngiti mo.",
+		caption: "ang ganda ng ngiti mo dito",
+		image:
+			"Rosemie2.jpg",
 		alt: "A bunch of mushrooms that are growing on a moss",
 		accent: "#8b6c55",
 		accentRgb: "139, 108, 85",
@@ -30,29 +45,14 @@ const entries = [
 		nightSoft: "#f3eaca"
 	},
 	{
-		title: "Where the River Leaves the Map",
+		title: "Aking ulan",
 		prose:
-			"Beyond the final rowan, the river climbed into the mist and vanished between two cliffs. Its spray smelled of mint.",
-		note: "A silver moth returned my compass. The needle now points toward running water.",
-		margin: "Maps end where the forest begins to tell its own story.",
-		caption: "The hidden falls beyond the rowans",
+			"I used to hate Rain, but now it reminds me of you, the gentleness, the breeze, the calmness",
+		note: "Gusto ko ng ulan, sa lamig, at katahimikan nito",
+		margin: "pero mas gusto ko ang init ng yakap mo",
+		caption: "I Cherish, this First pic of Us",
 		image:
-			"https://images.unsplash.com/photo-1776698704755-e84d48ce05a5?auto=format&fit=crop&w=1200&q=85",
-		alt: "A waterfall cascading through a lush forest veiled in mist",
-		accent: "#4f805c",
-		accentRgb: "79, 128, 92",
-		night: "#cfe0bf",
-		nightSoft: "#edf0d0"
-	},
-	{
-		title: "The Meadow Remembers Names",
-		prose:
-			"At sundown, the wildflowers turned their faces toward each traveller. Mine whispered the name my grandmother used.",
-		note: "Golden pollen settled into the shape of a crown, then scattered before I could lift it.",
-		margin: "Speak kindly here. The meadow keeps every word.",
-		caption: "The namekeeping meadow at golden hour",
-		image:
-			"https://images.unsplash.com/photo-1761054254614-48f0c7c727ba?auto=format&fit=crop&w=1200&q=85",
+			"Rosemie4.jpg",
 		alt: "A field of wildflowers glowing in warm golden-hour sunlight",
 		accent: "#ae793d",
 		accentRgb: "174, 121, 61",

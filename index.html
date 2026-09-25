@@ -19,7 +19,7 @@
 			<div class="ambient ambient--two" aria-hidden="true"></div>
 
 			<header class="site-header">
-				<p class="eyebrow">Field notes gathered beneath the elder boughs</p>
+				<p class="eyebrow">For you, and my undying devotion</p>
 			</header>
 
 			<section
@@ -110,7 +110,22 @@
 				<span aria-hidden="true">𖥸</span>
 				<span>From the field trips</span>
 			</footer>
-		</main>
-		<script src="index.js"></script>
+			<audio id="backgroundMusic" loop preload="auto">
+                <source src="Audio.mp4" type="audio/mp4" />
+            </audio>
+
+            <script>
+                const backgroundMusic = document.getElementById("backgroundMusic");
+
+                document.addEventListener(
+                    "click",
+                    () => {
+                        backgroundMusic.play().catch(() => {});
+                    },
+                    { once: true }
+                );
+            </script>
+
+            <script src="index.js"></script>
 	</body>
 </html>
